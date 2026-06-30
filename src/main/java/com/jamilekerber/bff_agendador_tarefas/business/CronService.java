@@ -37,7 +37,7 @@ public class CronService {
 
         List<TarefasDTOResponse> listaTarefas = tarefasService.buscaTarefasAgendadasPorPeriodo(horaAtual,
                 horaFutura, token);
-        log.info("Taredas encontradas " + listaTarefas);
+        log.info("Tarefas encontradas " + listaTarefas);
 
         listaTarefas.forEach(tarefa -> {
             emailService.enviaEmail(tarefa);
